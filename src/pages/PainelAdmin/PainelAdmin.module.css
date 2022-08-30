@@ -1,0 +1,28 @@
+@import url('https://rsms.me/inter/inter.css');
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.headerh1 {
+    font-family: 'Inter', sans-serif;
+    margin-left: 3%;
+}
+
+.usrimg {
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-right: 3%;
+}
