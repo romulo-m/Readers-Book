@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from '../../components/Button/Button'
+import Input from '../../components/Input/Input'
 import S from './PainelAdmin.module.css'
 
 const PainelAdmin = () => {
@@ -8,7 +10,11 @@ const PainelAdmin = () => {
         <h1 className={S.headerh1}>Dashboard</h1>
         <div className={S.usrimg}></div>
         </header>
-        <hr></hr>
+        <hr className={S.hr}></hr>
+        <div className={S.topActions}>
+        <Input type="text" style={S.searchbar} placeholder="Buscar"/>
+        <Button texto="Criar" style={S.btnCriar}/>
+        </div>
     </div>
   )
 }
