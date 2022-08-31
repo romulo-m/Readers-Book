@@ -5,9 +5,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 
+        2px 0 10px 0 rgba(0, 0, 0, 0.12)
+        2px 0 15px 0 rgba(0, 0, 0, 0.09);
 }
 
 .nav {
-    display: flex;
-    flex-direction: column;
+   margin-top: 30px;
+   width: 100%;
+}
+
+.linha {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+}
+
+.linha:hover {
+    background: linear-gradient(135deg, #c6c6c6 0%, #AAAAAA 100%);
 }

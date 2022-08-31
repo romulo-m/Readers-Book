@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from '../../components/Button/Button'
 import Input from '../../components/Input/Input'
+import DataTable from '../../components/Table/Table'
+import Table from '../../components/Table/Table'
 import S from './PainelAdmin.module.css'
 
 const PainelAdmin = () => {
@@ -13,8 +15,12 @@ const PainelAdmin = () => {
         <hr className={S.hr}></hr>
         <div className={S.topActions}>
         <Input type="text" style={S.searchbar} placeholder="Buscar"/>
-        <Button texto="Criar" style={S.btnCriar}/>
+        <Button texto="Adicionar" style={S.btnCriar}/>
         </div>
+        <section className={S.content}>
+          <h2>Gerenciamento de Produtos</h2>
+          <DataTable />
+        </section>
     </div>
   )
 }

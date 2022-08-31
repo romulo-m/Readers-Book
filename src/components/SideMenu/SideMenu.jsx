@@ -6,10 +6,10 @@ const SideMenu = () => {
   return (
     <div className={S.menu}>
         <nav className={S.nav}>
-            <Link to={"/"}>Login</Link>
-            <Link to={"/home"}>Início</Link>
-            <Link to={"/cadastro"}>Cadastro</Link>
-            <Link to={"/dashboard"}>Dashboard</Link>
+            <Link className={S.linha} to={"/"}>Login</Link>
+            <Link className={S.linha} to={"/home"}>Início</Link>
+            <Link className={S.linha} to={"/cadastro"}>Cadastro</Link>
+            <Link className={S.linha} to={"/dashboard"}>Dashboard</Link>
         </nav>
     </div>
   )
