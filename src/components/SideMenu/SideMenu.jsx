@@ -6,8 +6,8 @@ const SideMenu = () => {
   return (
     <div className={S.menu}>
         <nav className={S.nav}>
-            <Link to={"/"}>Início</Link>
-            <Link to={"/login"}>Login</Link>
+            <Link to={"/"}>Login</Link>
+            <Link to={"/home"}>Início</Link>
             <Link to={"/cadastro"}>Cadastro</Link>
             <Link to={"/dashboard"}>Dashboard</Link>
         </nav>
