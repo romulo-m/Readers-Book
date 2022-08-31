@@ -13,7 +13,7 @@ const Login = () => {
         <Input style={S.input} type={'text'} placeholder={'Digite seu usuário'}/>
         <Label style={S.label} texto={'Digite sua senha'}/>
         <Input style={S.input} type={'text'} placeholder={'********'}/>
-        <Button className={S.btn} texto={'Entrar'} />
+        <Button style={S.btn} texto={'Entrar'} />
       </form>
     </section>
   )

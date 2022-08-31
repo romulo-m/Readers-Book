@@ -9,7 +9,7 @@ import SideMenu from './components/SideMenu/SideMenu'
 const Routes = () => {
   return (
     <BrowserRouter>
-        <SideMenu/>
+        {/* <SideMenu/> */}
         <Switch>
             <Route path='/' element={<Login/>}/>
             <Route path='/home' element={<Inicio/>}/>
