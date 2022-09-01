@@ -10,8 +10,9 @@ const Inicio = () => {
       <h1>Otimize</h1>
       <h2>operações</h2>
       <p><b>Reader's Book</b> é o sistema mais intuitivo de gerenciamento de livrarias do mercado</p>
-      <Button texto="Comece agora"/>
+      <Button texto="Comece agora" style={S.btn}/>
       </div>
+      <h3>Nossas vantagens</h3>
       <div className={S.gridcontainer}>
         {/* Grid de cards explicando o produto */}
         <HomeCard titulo='Lorem ipsum' descricao='Lorem ipsum dolor bla bla'/>
