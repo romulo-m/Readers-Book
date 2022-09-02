@@ -46,6 +46,14 @@ const Cadastro = () => {
             <Input  style ={S.input}/>
             <Label style = {{textAlign: "left"}} texto = {"Fornecedor"}/>
             <Input style ={S.input}/>
+            <Label style = {{textAlign: "left"}} texto = {"Fornecedor"}/>
+            <Input style ={S.input}/>
+            <Label style = {{textAlign: "left"}} texto = {"Fornecedor"}/>
+            <Input style ={S.input}/>
+            <Label style = {{textAlign: "left"}} texto = {"Fornecedor"}/>
+            <Input style ={S.input}/>
+            <Label style = {{textAlign: "left"}} texto = {"Fornecedor"}/>
+            <Input style ={S.input}/>
         </fieldset>
     </form>
 
