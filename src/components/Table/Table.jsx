@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { RiEdit2Fill, RiDeleteBin6Fill } from "react-icons/ri";
-import {estoqueGet} from '../../service/ApiLivros'
+import {estoqueGet, livrosDelete} from '../../service/ApiLivros'
 import S from './Table.module.css'
 
 
 const Table = () => {
 
-    // //state da busca
-    // const [query, setQuery] = useState('')
-
-    // const [infos, setInfos] = useState('')
 
     const [table, setTable] = useState([])
 
@@ -22,6 +18,14 @@ const Table = () => {
         }
         
     }
+
+    // async function deletarLivro(id) {
+    //     try {
+    //         const response = await deletarLivro(id)
+    //     } catch (e) {
+    //         return e.message
+    //     }
+    // }
 
     useEffect(() => {
         getLivros()

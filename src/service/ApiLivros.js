@@ -14,6 +14,11 @@ export const api = axios.create({
       return response.data.livros
       ;
   }
+
+  export const livrosDelete = async (res, id) => {
+    const response = await api.delete(`/livros/idLivro/${id}`, res)
+       return response.data.livros;
+   }
  
 
 
