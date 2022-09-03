@@ -5,9 +5,8 @@ export const api = axios.create({
   });
 
   export const estoqueGet = async (res) => {
-    const response = await api.post('/estoque', res)
-       return response.data.produtos
-       ;
+    const response = await api.get('/livros', res)
+       return response.data.livros;
    }
 
   export const livrosPost = async (res) => {
