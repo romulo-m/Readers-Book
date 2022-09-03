@@ -1,7 +1,6 @@
 import React from 'react'
 import Button from '../../components/Button/Button'
 import Input from '../../components/Input/Input'
-import DataTable from '../../components/Table/Table'
 import Table from '../../components/Table/Table'
 import S from './PainelAdmin.module.css'
 
@@ -19,7 +18,7 @@ const PainelAdmin = () => {
         </div>
         <section className={S.content}>
           <h2>Gerenciamento de Produtos</h2>
-          <DataTable />
+          <Table />
         </section>
     </div>
   )
