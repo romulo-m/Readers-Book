@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { RiEdit2Fill, RiDeleteBin6Fill } from "react-icons/ri";
-import {estoqueGet, livrosDelete} from '../../service/ApiLivros'
+import { Link } from 'react-router-dom';
+import {estoqueGet, livrosDelete, updateBook} from '../../service/ApiLivros'
 import S from './Table.module.css'
 
 
 const Table = () => {
 
-
     const [table, setTable] = useState([])
+
+    // const results = table.filter((item) => {
+    //     if (value === '') {
+    //         return item;
+    //     } else if (item.titulo.toLowerCase().includes(value.toLowerCase())) {
+    //         return item;
+    //     }
+    // });
 
     async function getLivros() {
         try {
@@ -19,13 +27,23 @@ const Table = () => {
         
     }
 
-    // async function deletarLivro(id) {
+    // async function atualizarLivro(id) {
     //     try {
-    //         const response = await deletarLivro(id)
+    //         const response = await updateBook()
+    //         console.log(response)
     //     } catch (e) {
     //         return e.message
     //     }
     // }
+
+    async function deletarLivro(id) {
+        try {
+            const response = await livrosDelete(id)
+            console.log(response)
+        } catch (e) {
+            return e.message
+        }
+    }
 
     useEffect(() => {
         getLivros()
@@ -42,8 +60,16 @@ const Table = () => {
                     <td className={S.linha}>{item.formato}</td>
                     <td className={S.linha}>R$ {item.valor},00</td>
                     <td className={S.linha}>
+                    <Link 
+                        className={S.btn}
+                        role="button"
+                        to = {`/update/${item.idLivro}`}
+                        >
+
                         <button className={S.btn}><RiEdit2Fill /></button>
-                        <button className={S.btn}><RiDeleteBin6Fill /></button>
+                    </Link>
+                        
+                        <button className={S.btn} onClick={() => deletarLivro(item.idLivro)}><RiDeleteBin6Fill /></button>
                     </td>
                 </tr>
             )

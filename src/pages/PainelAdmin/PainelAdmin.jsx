@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../../components/Button/Button'
 import Input from '../../components/Input/Input'
 import Table from '../../components/Table/Table'
+import {getLivroTitulo} from '../../service/ApiLivros'
 import S from './PainelAdmin.module.css'
 
 const PainelAdmin = () => {
+
+  const [titulo, setTitulo] = useState('')
+
+  function handleChange(e) {
+    const value = e.target.value    
+    setTitulo(value)
+    getLivroTitulo(value)
+
+  }
+
+
   return (
     <div className={S.main}>
         <header className={S.header}>
@@ -13,7 +25,7 @@ const PainelAdmin = () => {
         </header>
         <hr className={S.hr}></hr>
         <div className={S.topActions}>
-        <Input type="text" style={S.searchbar} placeholder="Buscar"/>
+        <Input type="text" style={S.searchbar} value={titulo} onChange={handleChange} placeholder="Buscar"/>
         <Button texto="Adicionar" style={S.btnCriar}/>
         </div>
         <section className={S.content}>
