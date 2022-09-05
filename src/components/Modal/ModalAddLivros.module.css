@@ -1,0 +1,14 @@
+.form{
+    display: flex;
+    justify-content: space-around;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    border: 0px;
+}
+.input{
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    margin-top: 1em;
+}

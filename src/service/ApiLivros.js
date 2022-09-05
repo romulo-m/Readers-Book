@@ -4,8 +4,8 @@ export const api = axios.create({
     baseURL: 'https://olimpia-api.herokuapp.com',
   });
 
-  export const estoqueGet = async (res) => {
-    const response = await api.get('/livros', res)
+  export const estoqueGet = async () => {
+    const response = await api.get('/livros')
        return response.data.livros;
    }
 
