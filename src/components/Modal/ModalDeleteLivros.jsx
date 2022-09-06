@@ -18,7 +18,7 @@ const style = {
 const ModalDeleteLivros = ({open, onClose, deletaLivros, idLivro}) => {
   return (
     <div>
-        <Button onClick={open}>Open modal</Button>
+       
 <Modal
   open={open}
   onClose={onClose}

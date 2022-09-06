@@ -4,12 +4,12 @@ import Label from '../../components/Label/Label'
 import Input from '../../components/Input/Input'
 import {getLivroId, updateBook} from '../../service/ApiLivros'
 import {useState, useEffect} from "react"
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import S from './Update.module.css'
 
 const Update = () => {
 
-
+const navigate = useNavigate()
 const {id} = useParams()
 const [res, setRes] = useState ('');
 
@@ -26,6 +26,7 @@ const [res, setRes] = useState ('');
   function editLivro(e) {
     e.preventDefault()
     updateBook(res, id)
+    navigate('/dashboard')
     
   }
 
