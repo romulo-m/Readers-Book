@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 import {estoqueGet, livrosDelete, updateBook} from '../../service/ApiLivros'
 import ModalDeleteLivros from '../Modal/ModalDeleteLivros';
 import S from './Table.module.css'
-
+import Loading from '../../components/Loading/Loading'
 
 
 const Table = () => {
     const [req, setReq] = useState(0)
-
+    const [removeLoading, setRemoveloading] = useState(false)
     const [table, setTable] = useState([])
 
     // const results = table.filter((item) => {
@@ -25,6 +25,7 @@ const Table = () => {
         try {
             const response = await estoqueGet()
             setTable(response)
+            
         } catch (e) {
             return e.message
         }
@@ -45,11 +46,16 @@ const Table = () => {
             const response = await livrosDelete(idLivro)
             console.log(response)
             fecharModal()
+            
             setReq(req + 1)
         } catch (e) {
             return e.message
         }
     }
+
+    useEffect(() => {
+        setRemoveloading(true)
+    },[req])
 
     useEffect(() => {
         getLivros()
@@ -139,7 +145,7 @@ const Table = () => {
          idLivro={idLivro}
 
         />
-
+    {!removeLoading && <Loading/>}
     </table>
     
   )
