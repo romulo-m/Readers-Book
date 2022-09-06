@@ -59,18 +59,11 @@ const Cadastro = () => {
         <fieldset className = {S.fieldset} >
             <Label style = {{textAlign: "left"}} texto = {"titulo"} />
             <Input type={"text"} style ={S.input} value={res.titulo} onChange={({target}) => handleChange(target, "titulo")}/>
-            <Label style = {{textAlign: "left"}} texto = {"autor"} />
-            <Input type={"text"} style ={S.input} value={res.autor} onChange={({target}) => handleChange(target, "autor")}/>
-            <Label style = {{textAlign: "left"}} texto = {"genero"}/>
-            <Input type={"text"} style ={S.input} value={res.genero} onChange={({target}) => handleChange(target, "genero")}/>
             <Label style = {{textAlign: "left"}} texto = {"formato"}/>
             <Input type={"text"} style ={S.input} value={res.formato} onChange={({target}) => handleChange(target, "formato")}/>
             <Label style = {{textAlign: "left"}} texto = {"valor"}/>
             <Input type={"number"} style ={S.input} value={res.valor} onChange={({target}) => handleChangeNum(target, "valor")}/>
-            <Label style = {{textAlign: "left"}} texto = {"idioma"}/>
-            <Input type={"text"} style ={S.input} value={res.idioma} onChange={({target}) => handleChange(target, "idioma")}/>
-            <Label style = {{textAlign: "left"}} texto = {"numeroPaginas"}/>
-            <Input type={"number"} style ={S.input} value={res.numeroPaginas} onChange={({target}) => handleChangeNum(target, "numeroPaginas")}/>
+            
         </fieldset>
     </form>
 
