@@ -6,6 +6,7 @@ import S from "./Login.module.css"
 import bookshelf from '../../assets/bookshelf.jpg'
 
 const Login = () => {
+
   return (
     <section className={S.container}>
       <form className={S.forms}>
@@ -18,7 +19,7 @@ const Login = () => {
         <Label style={S.label} texto={'Senha'}/>
         <Input style={S.input} type={'text'} placeholder={'********'}/>
         </div>
-        <Button style={S.btn} texto={'Entrar'} />
+        <Button style={S.btn} texto={'Entrar'}/>
       </form>
       <img src={bookshelf} className={S.img}></img>
     </section>

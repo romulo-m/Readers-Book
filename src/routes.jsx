@@ -12,7 +12,7 @@ const Routes = () => {
         <SideMenu/>
         <Switch>
             <Route path='/' element={<Login/>}/>
-            <Route path='/home' element={<Inicio/>}/>
+            <Route path='/home' element={Inicio}/>
             <Route path='/cadastro' element={<Cadastro/>}/>
             <Route path='/dashboard' element={<PainelAdmin/>}/>
         </Switch>
