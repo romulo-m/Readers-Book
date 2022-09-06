@@ -5,6 +5,7 @@ import Login from './pages/Login/Login'
 import Cadastro from './pages/Cadastro/Cadastro'
 import PainelAdmin from './pages/PainelAdmin/PainelAdmin'
 import SideMenu from './components/SideMenu/SideMenu'
+import Update from './pages/Update/Update'
 
 const Routes = () => {
   return (
@@ -15,6 +16,7 @@ const Routes = () => {
             <Route path='/home' element={Inicio}/>
             <Route path='/cadastro' element={<Cadastro/>}/>
             <Route path='/dashboard' element={<PainelAdmin/>}/>
+            <Route path='/update/:id' element={<Update />}/>
         </Switch>
     </BrowserRouter>
   )
