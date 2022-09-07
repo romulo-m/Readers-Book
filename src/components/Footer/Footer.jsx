@@ -7,20 +7,22 @@ const Footer = () => {
       <div className={S.divs}>
         <h4>Follow</h4>
         <li>Instagram</li>
-        <li>Facebook</li>   
+        <li>Facebook</li>
       </div>
       <div className={S.divs}>
-        <h4>Contato</h4>
+        <h4>Contact</h4>
         <li>3233-2975</li>
         <li>hello@readersbook.com.br</li>
       </div>
       <div className={S.divs}>
-        <h4>Escritório</h4>
+        <h4>Office</h4>
         <li> Rua Amendoin, n.7</li>
-        <li> Rio de Janeiro</li>
+        <li> Rio de Janeiro/RJ</li>
       </div>
       <div className={S.divs}>
-      Desenvolvido por Squad 1
+        <h4> Resilia Educação</h4>
+        <li>Desenvolvido por Squad 1</li>
+        <li>&copy;{new Date().getFullYear()}</li>
       </div>
     </footer>
   );

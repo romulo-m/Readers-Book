@@ -1,8 +1,10 @@
-import React from 'react'
-import Button from '../../components/Button/Button'
-import HomeCard from '../../components/HomeCard/HomeCard'
-import S from './Inicio.module.css'
-import Footer from '../../components/Footer/Footer'
+
+import React from "react";
+import Button from "../../components/Button/Button";
+import HomeCard from "../../components/HomeCard/HomeCard";
+import S from "./Inicio.module.css";
+import Footer from "../../components/Footer/Footer";
+import livros from "../../assets/livros.jpg";
 import SideMenu from '../../components/SideMenu/SideMenu'
 
 const Inicio = () => {
@@ -11,25 +13,50 @@ const Inicio = () => {
       <SideMenu/>
     <div className={S.containerall}>
       <div className={S.containertext}>
-      <h1>Otimize</h1>
-      <h2>operações</h2>
-      <p><b>Reader's Book</b> é o sistema mais intuitivo de gerenciamento de livrarias do mercado</p>
-      <Button texto="Comece agora" style={S.btn}/>
+        <h1>Reader's Book</h1>
+        <h2>Otimize operações</h2>
+        <p>
+          <b>Reader's Book</b> é o sistema mais intuitivo de gerenciamento de
+          livrarias do mercado
+        </p>
+        <Button texto="Comece agora" style={S.btn} />
       </div>
-      <h3>Nossas vantagens</h3>
+      <h3 className={S.vantagens}>Nossas vantagens</h3>
       <div className={S.gridcontainer}>
-        {/* Grid de cards explicando o produto */}
-        <HomeCard titulo='Lorem ipsum' descricao='Lorem ipsum dolor bla bla'/>
-        <HomeCard titulo='Lorem ipsum' descricao='Lorem ipsum dolor bla bla'/>
-        <HomeCard titulo='Lorem ipsum' descricao='Lorem ipsum dolor bla bla'/>
+        <HomeCard
+          titulo="Controle de Estoque"
+          descricao="Organize seu estoque de mercadorias, supervisionando as entradas e saídas de forma impecável."
+        />
+        <HomeCard
+          titulo="Orçamento e Vendas"
+          descricao="Para vender produto ou prestar serviço, o orçamento ideal aumenta seu profissionalismo para fechar propostas."
+        />
+        <HomeCard
+          titulo="Atendimentos"
+          descricao="Organize as demandas internas de sua empresa gerenciando as filas de atendimentos de seus clientes facilitando ainda mais a produtividade de seus negócios"
+        />
       </div>
-      <div>
-        {/* Texto com instruções sobre o produto e imagem */}
+      <div className={S.imagemDiv}>
+        <img src={livros} className={S.img}></img>
+        <p className={S.texto}>
+          Livrarias são espaço para a cultura, o entretenimento e a informação.
+          <br />
+          O gerenciamento desse tipo de estabelecimento é algo com relativo grau
+          de complexidade, para facilitar a vida dos empresários o sistema
+          oferece um moderno e prático programa para livrarias.
+        </p>
       </div>
-      <Footer/>
+      <h4 className={S.vantagens}>Quem somos</h4>
+      <div className={S.about}>
+        <HomeCard titulo={"André Siqueira"} descricao={"Gestão de gente"}/>
+        <HomeCard titulo={"Rômulo Miranda"} descricao={"Gestão de conhecimento"}/>
+        <HomeCard titulo={"João Pedro Moura"} descricao={"Co-facilitador"}/> 
+        <HomeCard titulo={"Beatriz Mioranza"} descricao={"Colaboradora"}/>
+      </div>
+      <Footer />
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Inicio
+
+export default Inicio;
