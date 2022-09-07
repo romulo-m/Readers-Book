@@ -3,9 +3,12 @@ import Button from '../../components/Button/Button'
 import HomeCard from '../../components/HomeCard/HomeCard'
 import S from './Inicio.module.css'
 import Footer from '../../components/Footer/Footer'
+import SideMenu from '../../components/SideMenu/SideMenu'
 
 const Inicio = () => {
   return (
+    <div>
+      <SideMenu/>
     <div className={S.containerall}>
       <div className={S.containertext}>
       <h1>Otimize</h1>
@@ -24,6 +27,7 @@ const Inicio = () => {
         {/* Texto com instruções sobre o produto e imagem */}
       </div>
       <Footer/>
+    </div>
     </div>
   )
 }
