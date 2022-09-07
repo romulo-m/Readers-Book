@@ -20,3 +20,8 @@
 .btn:hover {
     background-color: #c6c6c6;
 }
+.divLoading{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
