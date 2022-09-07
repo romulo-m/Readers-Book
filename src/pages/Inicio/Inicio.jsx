@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../../components/Button/Button'
 import HomeCard from '../../components/HomeCard/HomeCard'
 import S from './Inicio.module.css'
+import Footer from '../../components/Footer/Footer'
 
 const Inicio = () => {
   return (
@@ -22,6 +23,7 @@ const Inicio = () => {
       <div>
         {/* Texto com instruções sobre o produto e imagem */}
       </div>
+      <Footer/>
     </div>
   )
 }
