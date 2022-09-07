@@ -32,7 +32,6 @@ const [res, setRes] = useState ('');
 
   async function handleReq() {    
     const response  = await getLivroId(id)
-    console.log(response);
     setRes({
           titulo: response.titulo,
           autor: response.autor,
@@ -54,28 +53,27 @@ const [res, setRes] = useState ('');
         <h1 className = {S.h1}>Editar Livro</h1>
         <div className={S.usrimg}></div>
     </header>
-        <hr className = {S.hr}/>
+    <hr className = {S.hr}/>
     <form action="" className = {S.form} >
-        <article className = {S.article}>
-          <div className = {S.imgDiv}></div>
-        <Button style ={S.button}  texto ={"Editar"} onClick={editLivro}/>
-        <Button style ={S.button} texto ={"Voltar"}/>
-        </article>
         <fieldset className = {S.fieldset} >
-            <Label style = {{textAlign: "left"}} texto = {"Titulo"} />
+            <Label className={S.label} texto = {"Titulo"} />
             <Input type={"text"} style ={S.input} value={res.titulo} onChange={({target}) => handleChange(target, "titulo")}/>
-            <Label style = {{textAlign: "left"}} texto = {"Autor"} />
+            <Label className={S.label} texto = {"Autor"} />
             <Input type={"text"} style ={S.input} value={res.autor} onChange={({target}) => handleChange(target, "autor")}/>
-            <Label style = {{textAlign: "left"}} texto = {"Genero"}/>
+            <Label className={S.label} texto = {"Genero"}/>
             <Input type={"text"} style ={S.input} value={res.genero} onChange={({target}) => handleChange(target, "genero")}/>
-            <Label style = {{textAlign: "left"}} texto = {"Gormato"}/>
+            <Label className={S.label} texto = {"Gormato"}/>
             <Input type={"text"} style ={S.input} value={res.formato} onChange={({target}) => handleChange(target, "formato")}/>
-            <Label style = {{textAlign: "left"}} texto = {"Valor"}/>
+            <Label className={S.label} texto = {"Valor"}/>
             <Input type={"number"} style ={S.input} value={res.valor} onChange={({target}) => handleChangeNum(target, "valor")}/>
-            <Label style = {{textAlign: "left"}} texto = {"Idioma"}/>
+            <Label className={S.label} texto = {"Idioma"}/>
             <Input type={"text"} style ={S.input} value={res.idioma} onChange={({target}) => handleChange(target, "idioma")}/>
-            <Label style = {{textAlign: "left"}} texto = {"Numero de Paginas"}/>
+            <Label className={S.label} texto = {"Numero de Paginas"}/>
             <Input type={"number"} style ={S.input} value={res.numeroPaginas} onChange={({target}) => handleChangeNum(target, "numeroPaginas")}/>
+            <div className={S.divBtn}>
+            <Button style ={S.button}  texto ={"Editar"} onClick={editLivro}/>
+            <Button style ={S.button} texto ={"Voltar"} onClick={() => navigate('/dashboard')}/>
+            </div>
         </fieldset>
     </form>
 

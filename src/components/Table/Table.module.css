@@ -1,20 +1,9 @@
-.table {
-    width: 100%;
-    margin-top: 30px;
-    border: 1px solid black;
-}
-
-.titulo {
-    padding: 10px;
-}
-
 .linha {
-    padding: 5px;
-}
-
-.noData {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    padding: 15px;
+    border-bottom: 1px solid black;
 }
 
 .btn {

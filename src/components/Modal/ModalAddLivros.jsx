@@ -72,11 +72,11 @@ const style = {
       >
         <Box sx={style}>
             <form className = {S.form}>
-        <Label style = {{textAlign: "left"}} texto = {"titulo"} />
+        <Label style = {{textAlign: "left"}} texto = {"Titulo"} />
             <Input type={"text"} style ={S.input} value={res.titulo} onChange={({target}) => handleChange(target, "titulo")}/>
-            <Label style = {{textAlign: "left"}} texto = {"formato"}/>
+            <Label style = {{textAlign: "left"}} texto = {"Formato"}/>
             <Input type={"text"} style ={S.input}  value={res.formato} onChange={({target}) => handleChange(target, "formato")}/>
-            <Label style = {{textAlign: "left"}} texto = {"valor"}/>
+            <Label style = {{textAlign: "left"}} texto = {"Valor"}/>
             <Input type={"number"} style ={S.input}  value={res.valor} onChange={({target}) => handleChangeNum(target, "valor")}/>
                 <Button   onClick={createPost}> Criar </Button>
                 <Button onClick={onClose}>  Voltar </Button>
