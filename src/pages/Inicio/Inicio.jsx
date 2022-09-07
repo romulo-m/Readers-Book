@@ -5,12 +5,9 @@ import HomeCard from "../../components/HomeCard/HomeCard";
 import S from "./Inicio.module.css";
 import Footer from "../../components/Footer/Footer";
 import livros from "../../assets/livros.jpg";
-import SideMenu from '../../components/SideMenu/SideMenu'
 
 const Inicio = () => {
   return (
-    <div>
-      <SideMenu/>
     <div className={S.containerall}>
       <div className={S.containertext}>
         <h1>Reader's Book</h1>
