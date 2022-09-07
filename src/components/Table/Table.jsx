@@ -1,5 +1,4 @@
-import { Modal, requirePropFactory } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { RiEdit2Fill, RiDeleteBin6Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { livrosDelete } from "../../service/ApiLivros";
@@ -7,7 +6,6 @@ import ModalDeleteLivros from "../Modal/ModalDeleteLivros";
 import S from "./Table.module.css";
 
 const Table = ({ id, titulo, formato, valor, handleAtualizaTela}) => {
-  const [req, setReq] = useState(0);
   const [idLivro, setIdLivro] = useState();
   const [openDelete, setOpenDelete] = useState(false);
 
@@ -16,7 +14,6 @@ const Table = ({ id, titulo, formato, valor, handleAtualizaTela}) => {
       const response = await livrosDelete(idLivro);
       fecharModal();
       handleAtualizaTela()
-      setReq(req + 1);
     } catch (e) {
       return e.message;
     }

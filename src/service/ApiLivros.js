@@ -22,7 +22,7 @@ export const api = axios.create({
 
   export const livrosPost = async (res) => {
    const response = await api.post('/livros', res)
-    location.reload();
+      // location.reload();
       return response.data.msg
       ;
   }
