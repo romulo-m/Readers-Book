@@ -6,7 +6,6 @@ import Footer from "../../components/Footer/Footer";
 import livros from "../../assets/livros.jpg";
 import { useNavigate } from "react-router-dom";
 
-
 const Inicio = () => {
 
   const navigate = useNavigate()
