@@ -5,6 +5,7 @@ import ModalAddLivros from '../../components/Modal/ModalAddLivros'
 import Table from '../../components/Table/Table'
 import {getLivroTitulo} from '../../service/ApiLivros'
 import S from './PainelAdmin.module.css'
+import SideMenu from '../../components/SideMenu/SideMenu'
 
 const PainelAdmin = () => {
   const [render, setRender] = useState(false)
@@ -22,6 +23,8 @@ const PainelAdmin = () => {
   const handleClose = () => setOpen(false);
 
   return (
+    <div>
+    <SideMenu/>
     <div className={S.main}>
         <header className={S.header}>
         <h1 className={S.headerh1}>Dashboard</h1>
@@ -41,6 +44,7 @@ const PainelAdmin = () => {
          open={open}
          onClose={handleClose}
          />
+    </div>
     </div>
   )
 }
