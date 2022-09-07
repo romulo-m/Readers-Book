@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
 import ModalAddLivros from "../../components/Modal/ModalAddLivros";
+import SideMenu from "../../components/SideMenu/SideMenu";
 import Table from "../../components/Table/Table";
 import { estoqueGet } from "../../service/ApiLivros";
 import S from "./PainelAdmin.module.css";
@@ -52,8 +53,8 @@ const PainelAdmin = () => {
   }, [atualizarTela]);
 
   return (
-    <div>
-    <SideMenu/>
+    <>
+    <SideMenu />
     <div className={S.main}>
       <header className={S.header}>
         <h1 className={S.headerh1}>Dashboard</h1>
@@ -101,6 +102,7 @@ const PainelAdmin = () => {
       </section>
       <ModalAddLivros setRender={setRender} open={open} onClose={handleClose} />
     </div>
+  </>
   );
 };
 
