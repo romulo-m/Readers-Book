@@ -1,0 +1,17 @@
+.containerPrincipal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height:80%;
+    background-color:black;
+}
+.divs{
+    text-align:start;
+    color: white;
+    height: 30%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,72 @@
+@import url('https://rsms.me/inter/inter.css');
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.hr {
+    margin-bottom: 2%;
+}
+
+.headerh1 {
+    font-family: 'Inter', sans-serif;
+    margin-left: 3%;
+}
+
+.usrimg {
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-right: 3%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.topActions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.searchbar {
+    background-color: #D9D9D9;
+    color: #00000093;
+    border: 1px 1px 1px 1px #000000;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 20em;
+    height: 2em;
+    margin-left: 3%;
+}
+
+.searchbar::placeholder {
+    text-align: left;
+    padding-left: 4%;
+}
+
+.btnCriar {
+    background-color: #D9D9D9;
+    /* width: 5em;
+    height: 2em; */
+    padding: 15px;
+    margin-right: 3%;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.content {
+    padding: 30px;
+    margin: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px #0004;
+}
