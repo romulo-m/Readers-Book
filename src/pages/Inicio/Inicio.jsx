@@ -1,12 +1,15 @@
-
 import React from "react";
 import Button from "../../components/Button/Button";
 import HomeCard from "../../components/HomeCard/HomeCard";
 import S from "./Inicio.module.css";
 import Footer from "../../components/Footer/Footer";
 import livros from "../../assets/livros.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Inicio = () => {
+
+  const navigate = useNavigate()
+
   return (
     <div className={S.containerall}>
       <div className={S.containertext}>
@@ -16,7 +19,7 @@ const Inicio = () => {
           <b>Reader's Book</b> é o sistema mais intuitivo de gerenciamento de
           livrarias do mercado
         </p>
-        <Button texto="Comece agora" style={S.btn} />
+        <Button texto="Comece agora" style={S.btn} onClick={()=>navigate("/dashboard")}/>
       </div>
       <h3 className={S.vantagens}>Nossas vantagens</h3>
       <div className={S.gridcontainer}>
@@ -48,7 +51,7 @@ const Inicio = () => {
         <HomeCard titulo={"André Siqueira"} descricao={"Gestão de gente"}/>
         <HomeCard titulo={"Rômulo Miranda"} descricao={"Gestão de conhecimento"}/>
         <HomeCard titulo={"João Pedro Moura"} descricao={"Co-facilitador"}/> 
-        <HomeCard titulo={"Beatriz Mioranza"} descricao={"Colaboradora"}/>
+        <HomeCard titulo={"Beatriz Mioranza"}descricao={"Colaboradora"}/>
       </div>
       <Footer />
     </div>
