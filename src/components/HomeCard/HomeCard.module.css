@@ -5,4 +5,6 @@
     justify-content: space-around;
     background-color: #D9D9D9;
     width: 80%;
+    border-radius: 10px;
+    height: 200px
 }
