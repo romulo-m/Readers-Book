@@ -52,7 +52,7 @@ const Inicio = () => {
         <HomeCard titulo={"André Siqueira"} descricao={"Gestão de gente"}/>
         <HomeCard titulo={"Rômulo Miranda"} descricao={"Gestão de conhecimento"}/>
         <HomeCard titulo={"João Pedro Moura"} descricao={"Co-facilitador"}/> 
-        <HomeCard titulo={"Beatriz Mioranza"} descricao={"Colaboradora"}/>
+        <HomeCard titulo={"Beatriz Mioranza"}descricao={"Colaboradora"}/>
       </div>
       <Footer />
     </div>
