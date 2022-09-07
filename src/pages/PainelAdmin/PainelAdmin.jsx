@@ -11,7 +11,6 @@ import S from "./PainelAdmin.module.css";
 
 
 const PainelAdmin = () => {
-  const [render, setRender] = useState(false);
   const [titulo, setTitulo] = useState("");
   const [table, setTable] = useState([]);
   const [atualizarTela, setAtualizarTela] = useState(false);
@@ -20,9 +19,9 @@ const PainelAdmin = () => {
   const handleClose = () => setOpen(false);
 
     const results = table.filter((item) => {
-      if (item.titulo === '') {
+      if (titulo === '') {
           return item;
-      } else if (item.titulo.toLowerCase().includes(item.titulo.toLowerCase())) {
+      } else if (item.titulo.toLowerCase().includes(titulo.toLowerCase())) {
           return item;
       }
     });
@@ -84,8 +83,8 @@ const PainelAdmin = () => {
             </tr>
           </thead>
           <tbody className={S.body}>
-            {!!table &&
-              table.map((item) => {
+            {table.length > 0 &&
+              results.map((item) => {
                 return (
                   <Table
                     key={item.idLivro}
@@ -100,7 +99,7 @@ const PainelAdmin = () => {
           </tbody>
         </table>
       </section>
-      <ModalAddLivros setRender={setRender} open={open} onClose={handleClose} />
+      <ModalAddLivros open={open} onClose={handleClose} handleAtualizaTela={handleAtualizaTela}/>
     </div>
   </>
   );
