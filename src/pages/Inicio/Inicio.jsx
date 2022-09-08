@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../../components/Button/Button";
 import HomeCard from "../../components/HomeCard/HomeCard";
 import S from "./Inicio.module.css";
@@ -6,12 +6,26 @@ import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
 import perfilbia from "../../assets/perfilbia.jpg";
+import Loading from "../../components/Loading/Loading";
 
 const Inicio = () => {
   const navigate = useNavigate();
+  
+  const [loading, setLoading] = useState(false);
+
+  useEffect(()=> {
+    setLoading(true);
+    setTimeout(()=> {
+      setLoading(false)
+    }, 3000)
+  }, [])
 
   return (
-    <div className={S.containerall}>
+    <div>
+      {loading ? (
+        <Loading/>
+      ) : (
+      <div className={S.containerall}>
       <header className={S.header}>
         <img src={logo} alt="logo" className={S.logo} />
       </header>
@@ -87,6 +101,8 @@ const Inicio = () => {
         </div>
       </div>
       <Footer />
+      </div>
+      )}
     </div>
   );
 };
