@@ -16,7 +16,7 @@ const Footer = () => {
       </div>
       <div className={S.divs}>
         <h4>Office</h4>
-        <li> Rua Amendoin, n.7</li>
+        <li> Rua da Paçoca, n.7</li>
         <li> Rio de Janeiro/RJ</li>
       </div>
       <div className={S.divs}>
