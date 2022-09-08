@@ -4,11 +4,8 @@ import Input from "../../components/Input/Input";
 import Label from "../../components/Label/Label";
 import S from "./Login.module.css";
 import bookshelf from "../../assets/bookshelf.jpg";
-import UserContext from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
 
-const initialState = { user: "", password: "" };
 
 function acessLogin({ user, password }) {
   if (user === "admin" && password === "123456") {
@@ -18,8 +15,7 @@ function acessLogin({ user, password }) {
   }
 }
 const Login = () => {
-  const [values, setValues] = useState(initialState);
-  const { setToken } = useContext(UserContext);
+  const [values, setValues] = useState({ user: "", password: "" });
   const navigate = useNavigate();
   function onChange(event, name) {
     const { value } = event.target;
@@ -32,11 +28,11 @@ const Login = () => {
   function submit(event) {
     event.preventDefault();
     const token = acessLogin(values);
-    console.log(token);
     if (token) {
       navigate("/home");
     } else {
-      setValues(initialState);
+      setValues({ user: "", password: "" });
+      Alert.alert('Erro de Login', 'Não foi possivel fazer o login'); 
     }
   }
 
@@ -52,7 +48,7 @@ const Login = () => {
             type={"text"}
             name={"user"}
             onChange={(event) => onChange(event, "user")}
-            defaultValue={values.user}
+            value={values.user}
           />
         </div>
         <div className={S.inputsection}>
@@ -63,7 +59,7 @@ const Login = () => {
             placeholder={"********"}
             name={"password"}
             onChange={(event) => onChange(event, "password")}
-            defaultValue={values.password}
+            value={values.password}
           />
         </div>
         <Button style={S.btn} texto={"Entrar"} onClick={submit} />
