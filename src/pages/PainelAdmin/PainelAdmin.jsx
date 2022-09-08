@@ -84,7 +84,7 @@ const PainelAdmin = () => {
           </thead>
           <tbody className={S.body}>
             {table.length > 0 &&
-              results.map((item) => {
+              results.map((item, i) => {
                 return (
                   <Table
                     key={item.idLivro}
@@ -103,6 +103,7 @@ const PainelAdmin = () => {
     </div>
   </>
   );
+  
 };
 
 export default PainelAdmin;
