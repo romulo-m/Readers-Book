@@ -12,7 +12,6 @@ const Routes = () => {
   return (
     <BrowserRouter>
     <UserProvider>
-        <SideMenu/>
         <Switch>
             <Route path='/' element={<Login/>}/>
             <Route path='/home' element={<Inicio/>}/>
