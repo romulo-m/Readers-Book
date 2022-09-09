@@ -4,10 +4,10 @@ import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Input from "../../components/Input/Input";
 import { livrosPost } from "../../service/ApiLivros";
-
 import Label from "../Label/Label";
 import { useState } from "react";
 import S from "../Modal/ModalAddLivros.module.css";
+import ModalAlert from "./ModalAlert";
 const style = {
   position: "absolute",
   top: "50%",
@@ -20,8 +20,8 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-
 const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
+  const [openAlert, setOpenAlert] = useState(false);
   const [res, setRes] = useState({
     titulo: "",
     autor: "",
@@ -31,10 +31,15 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
     idioma: " ",
     numeroPaginas: "",
   });
+  
+
 
   const handleChange = (target, key) => {
     const value = target.value;
-    setRes({ ...res, [key]: value });
+   
+
+      setRes({ ...res, [key]: value });
+    
   };
 
   const handleChangeNum = (target, key) => {
@@ -44,10 +49,25 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
 
   async function createPost(e) {
     e.preventDefault();
-    const response = await livrosPost(res);
-    setRes(response);
-    onClose();
-    handleAtualizaTela();
+    if((res.titulo && res.autor && res.genero && res.formato && res.valor && res.idioma && res.numeroPaginas) === ""){
+     
+     abrirModal()
+    }else{
+      const response = await livrosPost(res);
+      
+      setRes(response);
+      onClose();
+      handleAtualizaTela();
+    }
+  }
+
+  function abrirModal() {
+    
+    setOpenAlert(true);
+  }
+
+  function fecharModal() {
+    setOpenAlert(false);
   }
 
   return (
@@ -121,6 +141,10 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
           </form>
         </Box>
       </Modal>
+      <ModalAlert
+      open={openAlert}
+      onClose={fecharModal}
+      />
     </div>
   );
 };
