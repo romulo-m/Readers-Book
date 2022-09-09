@@ -6,10 +6,10 @@ Esta aplicação foi desenvolvida como projeto final do curso Desenvolvimento We
 
 ## Demandas do projeto :pencil2:
 
-- [ ] CRUD: Listagem, inclusão, edição e exclusão de dados
-- [ ] Consumo de API própria 
-- [ ] Log-in de usuários 
-- [ ] Animação de carregamento sem biblioteca
+- [X] CRUD: Listagem, inclusão, edição e exclusão de dados
+- [X] Consumo de API própria 
+- [X] Log-in de usuários 
+- [X] Animação de carregamento sem biblioteca
 - [X] Roteamento de páginas com a biblioteca react-router-dom
 - [X] Utilização de CSS Grid
 
