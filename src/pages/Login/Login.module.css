@@ -14,7 +14,7 @@
   justify-content: space-around;
   align-items: center;
   font-family: "Inter", sans-serif;
-  background-color: #e9e8e8;
+  background-color: #f8f5f5;
   height: 60%;
   width: 25%;
   border-radius: 5px;
@@ -32,11 +32,12 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  background-color: #e9e8e8;
+  background-color: #f8f5f5;
 }
 
 .inputsection > label {
   text-align: left;
+  padding-bottom: 2%;
 }
 
 input:focus {
@@ -45,14 +46,31 @@ input:focus {
 
 .btn {
   width: 60%;
-  background-color: #9e929281;
+  background-color: black;
   border-radius: 5px;
   border: 0px;
   height: 10%;
+  color: aliceblue;
+  cursor: pointer;
+  font-weight: bolder;
 }
+.btn:hover{
+  color: black;
+  background-color: aliceblue;
+  border: 1px solid black;
 
+}
 .img {
   height: 100%;
   width: 50%;
   object-fit: fill;
+}
+
+.alert{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  
 }

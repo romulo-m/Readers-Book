@@ -13,16 +13,7 @@
 }
 .h1{
     margin-left: 3%;
-}
-.usrimg {
-    background-color: #D9D9D9;
-    border-radius: 50%;
-    width: 3em;
-    height: 3em;
-    margin-top: 0.5%;
-    margin-bottom: 0.5%;
-    margin-right: 3%;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding-top: 5%;
 }
 
 .hr{

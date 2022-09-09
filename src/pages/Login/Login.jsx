@@ -5,7 +5,7 @@ import Label from "../../components/Label/Label";
 import S from "./Login.module.css";
 import bookshelf from "../../assets/bookshelf.jpg";
 import { useNavigate } from "react-router-dom";
-// import { Alert } from "@mui/material";
+import { Alert, AlertTitle } from "@mui/material";
 
 function acessLogin({ user, password }) {
   if (user === "admin" && password === "123456") {
@@ -64,8 +64,11 @@ const Login = () => {
             value={values.password}
           />
         </div>
-        {alertAppears ? <Alert severity="error">Usuário ou senha inválido!</Alert> : <div></div>}
-        {/* <Alert severity="error">Usuário ou senha inválido!</Alert> */}
+        <div>
+        {alertAppears ? <Alert className={S.alert} severity="error"> <AlertTitle>
+        Usuário ou senha inválido!
+          </AlertTitle></Alert> : <div></div>}
+        </div>
         <Button style={S.btn} texto={"Entrar"} onClick={submit}  />
       </form>
       <img src={bookshelf} className={S.img}></img>
