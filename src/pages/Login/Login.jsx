@@ -1,12 +1,11 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
 import Label from "../../components/Label/Label";
 import S from "./Login.module.css";
 import bookshelf from "../../assets/bookshelf.jpg";
 import { useNavigate } from "react-router-dom";
-import { Alert } from "@mui/material";
-
+// import { Alert } from "@mui/material";
 
 function acessLogin({ user, password }) {
   if (user === "admin" && password === "123456") {

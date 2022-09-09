@@ -57,9 +57,7 @@ const PainelAdmin = () => {
     <div className={S.main}>
       <header className={S.header}>
         <h1 className={S.headerh1}>Dashboard</h1>
-        <div className={S.usrimg}></div>
       </header>
-      <hr className={S.hr}></hr>
       <div className={S.topActions}>
         <Input
           type="text"
