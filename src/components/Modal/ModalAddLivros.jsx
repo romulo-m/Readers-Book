@@ -8,18 +8,7 @@ import Label from "../Label/Label";
 import { useState } from "react";
 import S from "../Modal/ModalAddLivros.module.css";
 import ModalAlert from "./ModalAlert";
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "500px",
-  heigth: "800px",
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+
 const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
   const [openAlert, setOpenAlert] = useState(false);
   const [res, setRes] = useState({
@@ -78,9 +67,9 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box className ={S.style}>
           <form className={S.form}>
-            <Label style={{ textAlign: "left" }} texto={"Titulo"} />
+            <Label style={{ textAlign: "center" }} texto={"Titulo"} />
             <Input
               required
               type={"text"}
@@ -88,7 +77,7 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
               value={res.titulo}
               onChange={({ target }) => handleChange(target, "titulo")}
             />
-            <Label style={{ textAlign: "left" }} texto={"Autor"} />
+            <Label style={{ textAlign: "center" }} texto={"Autor"} />
             <Input
               required
               type={"text"}
@@ -96,7 +85,7 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
               value={res.autor}
               onChange={({ target }) => handleChange(target, "autor")}
             />
-            <Label style={{ textAlign: "left" }} texto={"Gênero"} />
+            <Label style={{ textAlign: "center" }} texto={"Gênero"} />
             <Input
               required
               type={"text"}
@@ -104,7 +93,7 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
               value={res.genero}
               onChange={({ target }) => handleChange(target, "genero")}
             />
-            <Label style={{ textAlign: "left" }} texto={"Formato"} />
+            <Label style={{ textAlign: "center" }} texto={"Formato"} />
             <Input
               required
               type={"text"}
@@ -112,7 +101,7 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
               value={res.formato}
               onChange={({ target }) => handleChange(target, "formato")}
             />
-            <Label style={{ textAlign: "left" }} texto={"Valor"} />
+            <Label style={{ textAlign: "center" }} texto={"Valor"} />
             <Input
               required
               type={"number"}
@@ -120,7 +109,7 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
               value={res.valor}
               onChange={({ target }) => handleChangeNum(target, "valor")}
             />
-            <Label style={{ textAlign: "left" }} texto={"Idioma"} />
+            <Label style={{ textAlign: "center" }} texto={"Idioma"} />
             <Input
               required
               type={"text"}
@@ -128,7 +117,7 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
               value={res.idioma}
               onChange={({ target }) => handleChange(target, "idioma")}
             />
-            <Label style={{ textAlign: "left" }} texto={"Número de Páginas"} />
+            <Label style={{ textAlign: "center" }} texto={"Número de Páginas"} />
             <Input
               required
               type={"number"}

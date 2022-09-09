@@ -2,18 +2,8 @@ import React from 'react'
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
+import S from "./ModalAlert.module.css"
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-  };
 
 const ModalAlert = ({open, onClose}) => {
   return (
@@ -21,7 +11,7 @@ const ModalAlert = ({open, onClose}) => {
         <Modal
           open={open}
           onClose={onClose}>
-<Box sx={style}>
+<Box className ={S.style}>
     <p>Preencha todos os campos</p>
     <Button onClick={onClose}> Cancelar </Button>
   </Box>
