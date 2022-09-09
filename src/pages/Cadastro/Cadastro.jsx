@@ -47,9 +47,9 @@ const Cadastro = () => {
     <div className = {S.body}>
     <header className ={S.header}>
         <h1 className = {S.h1}>Criar cadastro</h1>
-        <div className={S.usrimg}></div>
+        {/* <div className={S.usrimg}></div> */}
     </header>
-        <hr className = {S.hr}/>
+        {/* <hr className = {S.hr}/> */}
     <form action="" className = {S.form} >
         <article className = {S.article}>
           <div className = {S.imgDiv}></div>
