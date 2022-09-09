@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./src/assets/logo.jpg" width="400">
+    <img src="./src/assets/logo.jpg" width="300">
 </p>
 
 <h1 align="center">Reader's Book 📚 </h1>
@@ -27,10 +27,11 @@ https://readers-book.vercel.app/
 ## ✨ Como utilizar aplicação
 
 1. Acesse o link da [aplicação](https://readers-book.vercel.app/);
-2. Insira o usuário e senha pré definidos:
-    _Usuário: admin_
-    _Senha: 123456_
-
+2. Insira o usuário e senha pré definidos: 
+```
+Usuário: admin
+Senha: 123456
+```
 3. Explorar! 
 
 ## 💻 Como rodar a aplicação localmente 
