@@ -1,12 +1,11 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
 import Label from "../../components/Label/Label";
 import S from "./Login.module.css";
 import bookshelf from "../../assets/bookshelf.jpg";
 import { useNavigate } from "react-router-dom";
-import { Alert } from "@mui/material";
-
+// import { Alert } from "@mui/material";
 
 function acessLogin({ user, password }) {
   if (user === "admin" && password === "123456") {
@@ -31,8 +30,10 @@ const Login = () => {
     const token = acessLogin(values);
     if (token) {
       navigate("/home");
+      return true;
     } else {
       setValues({ user: "", password: "" });
+      return false;
     }
   }
 
@@ -62,8 +63,11 @@ const Login = () => {
             value={values.password}
           />
         </div>
-        {/* <Alert severity="error">Usuário ou senha inválido!</Alert> */}
-        <Button style={S.btn} texto={"Entrar"} onClick={submit}  />
+        <Button
+          style={S.btn}
+          texto={"Entrar"}
+          onClick={submit}
+        />
       </form>
       <img src={bookshelf} className={S.img}></img>
     </section>

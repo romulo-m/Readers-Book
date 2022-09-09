@@ -4,9 +4,9 @@ import style from './HomeCard.module.css'
 const HomeCard = ({titulo, img, descricao}) => {
   return (
     <div className={style.card}>
-        <h2>{titulo}</h2>
-        <img src={img}></img>
-        <p>{descricao}</p>
+        <h2 className={style.titulo}>{titulo}</h2>
+        <img className={style.imagemIcon} src={img}></img>
+        <p className={style.descricao}>{descricao}</p>
     </div>
   )
 }

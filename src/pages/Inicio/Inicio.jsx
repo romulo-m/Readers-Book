@@ -5,8 +5,14 @@ import S from "./Inicio.module.css";
 import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
-import perfilbia from "../../assets/perfilbia.jpg";
+import perfilbiaa from "../../assets/perfilbiaa.jpg";
+import perfilandre from "../../assets/perfilandre.jpg";
+import perfiljoca from "../../assets/perfiljoca.jpg";
+import perfilromulo from "../../assets/perfilromulo.jpg";
 import Loading from "../../components/Loading/Loading";
+import controle from "../../assets/controledeestoque.png";
+import atendimento from "../../assets/atendimento.png";
+import orcamentos from "../../assets/orcamentos.png";
 
 const Inicio = () => {
   const navigate = useNavigate();
@@ -46,14 +52,17 @@ const Inicio = () => {
         <HomeCard
           titulo="Controle de Estoque"
           descricao="Organize seu estoque de mercadorias, supervisionando as entradas e saídas de forma impecável."
+          img={controle}
         />
         <HomeCard
           titulo="Orçamento e Vendas"
           descricao="Para vender produto ou prestar serviço, o orçamento ideal aumenta seu profissionalismo para fechar propostas."
+          img={orcamentos}
         />
         <HomeCard
           titulo="Atendimentos"
           descricao="Organize as demandas internas de sua empresa gerenciando as filas de atendimentos de seus clientes facilitando ainda mais a produtividade de seus negócios"
+          img={atendimento}
         />
       </div>
       <div className={S.textoDiv}>
@@ -64,7 +73,7 @@ const Inicio = () => {
       <h4 className={S.h4}>Quem somos</h4>
       <div className={S.aboutD}>
         <div className={S.about}>
-          <img src={perfilbia} alt="" className={S.fotoperfil} />
+          <img src={perfilbiaa} alt="" className={S.fotoperfil} />
           <div className={S.container}>
             <h4>
               <b>Beatriz Mioranza</b>
@@ -73,7 +82,7 @@ const Inicio = () => {
           </div>
         </div>
         <div className={S.about}>
-          <img src={logo} alt="" className={S.fotoperfil} />
+          <img src={perfilandre} alt="" className={S.fotoperfil} />
           <div className={S.container}>
             <h4>
               <b>André Siqueira</b>
@@ -82,7 +91,7 @@ const Inicio = () => {
           </div>
         </div>
         <div className={S.about}>
-          <img src={logo} alt="" className={S.fotoperfil} />
+          <img src={perfilromulo} alt="" className={S.fotoperfil} />
           <div className={S.container}>
             <h4>
               <b>Rômulo Miranda</b>
@@ -91,7 +100,7 @@ const Inicio = () => {
           </div>
         </div>
         <div className={S.about}>
-          <img src={logo} alt="" className={S.fotoperfil} />
+          <img src={perfiljoca} alt="" className={S.fotoperfil} />
           <div className={S.container}>
             <h4>
               <b>João Pedro de Moura</b>
