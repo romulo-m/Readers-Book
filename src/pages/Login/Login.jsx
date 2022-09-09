@@ -15,6 +15,7 @@ function acessLogin({ user, password }) {
   }
 }
 const Login = () => {
+  const [alertAppears, setAlertAppears] = useState(false)
   const [values, setValues] = useState({ user: "", password: "" });
   const navigate = useNavigate();
   function onChange(event, name) {
@@ -30,10 +31,10 @@ const Login = () => {
     const token = acessLogin(values);
     if (token) {
       navigate("/home");
-      return true;
+      setAlertAppears(false)
     } else {
       setValues({ user: "", password: "" });
-      return false;
+      setAlertAppears(true)
     }
   }
 
@@ -63,11 +64,9 @@ const Login = () => {
             value={values.password}
           />
         </div>
-        <Button
-          style={S.btn}
-          texto={"Entrar"}
-          onClick={submit}
-        />
+        {alertAppears ? <Alert severity="error">Usuário ou senha inválido!</Alert> : <div></div>}
+        {/* <Alert severity="error">Usuário ou senha inválido!</Alert> */}
+        <Button style={S.btn} texto={"Entrar"} onClick={submit}  />
       </form>
       <img src={bookshelf} className={S.img}></img>
     </section>
