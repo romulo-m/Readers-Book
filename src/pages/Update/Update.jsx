@@ -52,12 +52,10 @@ const Update = () => {
       <div className={S.body}>
         <header className={S.header}>
           <h1 className={S.h1}>Editar Livro</h1>
-          {/* <div className={S.usrimg}></div> */}
         </header>
-        {/* <hr className={S.hr} /> */}
         <form action="" className={S.form}>
           <fieldset className={S.fieldset}>
-            <Label className={S.label} texto={"Titulo"} />
+            <Label className={S.label} texto={"Título"} />
             <Input
               type={"text"}
               style={S.input}
@@ -71,7 +69,7 @@ const Update = () => {
               value={res.autor}
               onChange={({ target }) => handleChange(target, "autor")}
             />
-            <Label className={S.label} texto={"Genero"} />
+            <Label className={S.label} texto={"Gênero"} />
             <Input
               type={"text"}
               style={S.input}
@@ -99,7 +97,7 @@ const Update = () => {
               value={res.idioma}
               onChange={({ target }) => handleChange(target, "idioma")}
             />
-            <Label className={S.label} texto={"Numero de Paginas"} />
+            <Label className={S.label} texto={"Número de Páginas"} />
             <Input
               type={"number"}
               style={S.input}

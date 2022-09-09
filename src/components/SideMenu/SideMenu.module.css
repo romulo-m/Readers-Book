@@ -27,3 +27,11 @@
     background: linear-gradient(135deg, #c6c6c6 0%, #AAAAAA 100%);
     color: black;
 }
+
+@media only screen and (max-width: 1024px){
+    .menu {
+        height: 150vh;
+        width: 20%;
+    
+    }
+}

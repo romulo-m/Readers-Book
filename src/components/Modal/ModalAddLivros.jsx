@@ -69,7 +69,7 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
       >
         <Box className ={S.style}>
           <form className={S.form}>
-            <Label style={{ textAlign: "center" }} texto={"Titulo"} />
+            <Label style={{ textAlign: "center" }} texto={"Título"} />
             <Input
               required
               type={"text"}
@@ -125,8 +125,11 @@ const ModalAddLivros = ({ open, onClose, handleAtualizaTela }) => {
               value={res.numeroPaginas}
               onChange={({ target }) => handleChange(target, "numeroPaginas")}
             />
-            <Button onClick={createPost}> Criar </Button>
-            <Button onClick={onClose}> Voltar </Button>
+            <div className={S.butaoD}>
+            <Button onClick={createPost} > Criar </Button>
+            <Button onClick={onClose} > Voltar </Button>
+            </div>
+          
           </form>
         </Box>
       </Modal>
