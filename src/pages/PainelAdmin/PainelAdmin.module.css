@@ -1,8 +1,11 @@
 @import url('https://rsms.me/inter/inter.css');
 
+
 .main {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    width: 100%;
 }
 
 .header {
